@@ -10,19 +10,19 @@ module.exports = (env) => {
 
   if (env.NODE_ENV === 'production') {
     plugins.push(
-      new CleanWebpackPlugin(['dist'], {root: __dirname})
+      new CleanWebpackPlugin(['dist'], { root: __dirname })
     )
   }
 
   return {
 
     entry: {
-      "platzi-video": path.resolve(__dirname, 'index.js'),
+      "react-video": path.resolve(__dirname, 'index.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'js/[name].[hash].js',
-      publicPath: path.resolve(__dirname, 'dist')+"/",
+      publicPath: path.resolve(__dirname, 'dist') + "/",
       chunkFilename: 'js/[id].[chunkhash].js',
     },
     devServer: {

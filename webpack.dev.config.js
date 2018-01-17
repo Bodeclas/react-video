@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    "platzi-video": path.resolve(__dirname, 'index.js'),
+    "react-video": path.resolve(__dirname, 'index.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
