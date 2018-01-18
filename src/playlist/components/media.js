@@ -1,10 +1,10 @@
 import React, {
-  Component
+  PureComponent
 } from 'react';
 import PropTypes from 'prop-types';
 import './media.css';
 
-class Media extends Component {
+class Media extends PureComponent {
   render() {
     console.log(this.props);
     const styles = {
