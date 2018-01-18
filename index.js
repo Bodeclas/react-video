@@ -8,5 +8,5 @@ const app = document.getElementById('app')
 
 // ReactDOM.render(que voy a renderizar, donde lo haré);
 // const holaMundo = <h1>hola Estudiante!</h1>;
-render(<Media /> , app);
+render(<Media title="Que es el bitcoin??" author="Brayan" image="./images/covers/bitcoin.jpg" />, app);
 
