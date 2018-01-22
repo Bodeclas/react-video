@@ -1,17 +1,16 @@
 import React from 'react';
 import Media from './media.js';
 import './playlist.css';
-import Play from '../../icons/components/play';
+/* import Play from '../../icons/components/play';
+import Volume from '../../icons/components/volume';
+import FullScreen from '../../icons/components/full-screen';
+import Pause from '../../icons/components/pause'; */
 
 function Playlist(props) {
   const playlist = props.data.categories[0].playlist
   console.log(props.data);
   return (
     <div className="Playlist">
-      <Play
-        size={30}
-        color="red"
-      />
       {
         playlist.map((item) => {
           return <Media
