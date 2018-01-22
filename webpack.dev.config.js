@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    "react-video": path.resolve(__dirname, 'index.js'),
+    "home": path.resolve(__dirname, 'src/entries/home.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -12,8 +12,7 @@ module.exports = {
     port: 9000,
   },
   module: {
-    rules: [
-      {
+    rules: [{
         // test: que tipo de archivo quiero reconocer,
         // use: que loader se va a encargar del archivo
         test: /\.(js|jsx)$/,

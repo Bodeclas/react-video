@@ -10,14 +10,16 @@ module.exports = (env) => {
 
   if (env.NODE_ENV === 'production') {
     plugins.push(
-      new CleanWebpackPlugin(['dist'], { root: __dirname })
+      new CleanWebpackPlugin(['dist'], {
+        root: __dirname
+      })
     )
   }
 
   return {
 
     entry: {
-      "react-video": path.resolve(__dirname, 'index.js'),
+      "home": path.resolve(__dirname, 'src/entries/home.js'),
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -29,8 +31,7 @@ module.exports = (env) => {
       port: 9000,
     },
     module: {
-      rules: [
-        {
+      rules: [{
           // test: que tipo de archivo quiero reconocer,
           // use: que loader se va a encargar del archivo
           test: /\.(js|jsx)$/,
@@ -45,14 +46,12 @@ module.exports = (env) => {
         {
           test: /\.css$/,
           use: ExtractTextPlugin.extract({
-            use: [
-              {
-                loader: 'css-loader',
-                options: {
-                  minimize: true,
-                }
+            use: [{
+              loader: 'css-loader',
+              options: {
+                minimize: true,
               }
-            ]
+            }]
           })
         },
         {
