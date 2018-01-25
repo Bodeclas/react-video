@@ -4,7 +4,7 @@ import './related.css';
 function Related(props) {
   return (
     <div className="Related">
-      <img src="https://cdn-images-1.medium.com/max/512/1*qUlxDdY3T-rDtJ4LhLGkEg.png" width={250} />
+      <img src="http://via.placeholder.com/350x150" width={250} />
     </div>
   )
 }
