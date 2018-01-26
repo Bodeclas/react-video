@@ -3,6 +3,6 @@ import { render } from 'react-dom';
 import Home from '../pages/containers/home';
 import data from '../api.json';
 
-const app = document.getElementById('app')
+const home = document.getElementById('home-container');
 
-render(<Home data={data} />, app);
+render(<Home data={data} />, home);
