@@ -1,5 +1,8 @@
-## react-video
+# React-Video
 
-# Dev Server
+A basic application built with React 16
 
-Run `npm run build:dev`
+## Dev Server
+* Clone this repository.
+* Install dependencies `npm install`
+* Run `npm run build:dev`
