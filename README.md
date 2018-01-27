@@ -1,2 +1,5 @@
-# react-video
-Project with React 16
+## react-video
+
+# Dev Server
+
+Run `npm run build:dev`
