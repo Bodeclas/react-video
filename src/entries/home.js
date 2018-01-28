@@ -6,6 +6,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../reducers/data';
 
+import normalizedData from '../schemas/index';
+
+console.log(normalizedData);
+
 const initialState = {
   data: {
     ...data,
