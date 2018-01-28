@@ -7,7 +7,6 @@ class Media extends PureComponent {
     this.props.openModal(this.props);
   };
   render() {
-    console.log(this.props);
     const styles = {
       container: {
         color: '#44546b',
