@@ -5,6 +5,7 @@ import Home from '../pages/containers/home';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducer from '../reducers/index';
+import { Map as map} from 'immutable';
 
 /* import data from '../schemas/index'; */
 
@@ -22,7 +23,7 @@ import reducer from '../reducers/index';
 
 const store = createStore(
   reducer,
-  {},
+  map(),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 

@@ -8,11 +8,11 @@ function Categories(props) {
   return (
     <div className="Categories">
       <SearchContainer />
-      {props.search.map(element => <Media {...element} key={element.id} />)}
+      {props.search.map(element => <Media {...element.toJS()} key={element.get('id')} />)}
       {props.categories.map(item => {
         return <Category 
-          key={item.id} 
-          {...item} 
+          key={item.get('id')} 
+          {...item.toJS()} 
           handleOpenModal={props.handleOpenModal} 
         />;
       })}
