@@ -53,7 +53,7 @@ function mapStateToProps(state, props) {
 
   return {
     categories: categories,
-    search: state.search,
+    search: state.data.search,
   };
 }
 
