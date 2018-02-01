@@ -4,13 +4,13 @@ import './media.css';
 
 class Media extends PureComponent {
   handleClick = event => {
-    this.props.openModal(this.props);
+    this.props.openModal(this.props.id);
   };
   render() {
     const styles = {
       container: {
         color: '#44546b',
-        cursor: 'pointer',
+      cursor: 'pointer', 
         width: 210,
         border: '1px solid red',
       },
