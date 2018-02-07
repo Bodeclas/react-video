@@ -27,6 +27,7 @@ class Home extends Component {
             handleOpenModal={this.handleOpenModal}
             categories={this.props.categories}
             search={this.props.search}
+            isLoading={this.props.isLoading}
           />
           {this.props.modal.get('visibility') && (
             <ModalContainer>
@@ -72,6 +73,7 @@ function mapStateToProps(state, props) {
     categories: categories,
     search: searchResults,
     modal: state.get('modal'),
+    isLoading: state.get('isLoading').get('active'),
   };
 }
 

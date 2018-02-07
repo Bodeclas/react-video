@@ -8,18 +8,12 @@ function Categories(props) {
   return (
     <div className="Categories">
       <SearchContainer />
-      {props.search.map(element => 
-        <Media 
-          openModal={props.handleOpenModal}
-          {...element.toJS()} 
-          key={element.get('id')} 
-        />)}
+      {props.isLoading && <p>Buscando tus videos favoritos...</p>}
+      {props.search.map(element => (
+        <Media openModal={props.handleOpenModal} {...element.toJS()} key={element.get('id')} />
+      ))}
       {props.categories.map(item => {
-        return <Category 
-          key={item.get('id')} 
-          {...item.toJS()} 
-          handleOpenModal={props.handleOpenModal} 
-        />;
+        return <Category key={item.get('id')} {...item.toJS()} handleOpenModal={props.handleOpenModal} />;
       })}
     </div>
   );
