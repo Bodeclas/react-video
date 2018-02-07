@@ -10,7 +10,7 @@ class Media extends PureComponent {
     const styles = {
       container: {
         color: '#44546b',
-      cursor: 'pointer', 
+        cursor: 'pointer',
         width: 210,
         border: '1px solid red',
       },
@@ -19,8 +19,8 @@ class Media extends PureComponent {
       <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img src={'http://via.placeholder.com/350x150'} alt="" width={260} height={160} className="Media-image" />
-          <h3 className="Media-title"> {this.props.title} </h3> <p className="Media-author"> {this.props.author} </p>{' '}
-        </div>{' '}
+        </div>
+        <h3 className="Media-title"> {this.props.title} </h3> <p className="Media-author"> {this.props.author} </p>
       </div>
     );
   }
