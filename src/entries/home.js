@@ -7,8 +7,9 @@ import { createStore, applyMiddleware } from 'redux';
 import { Map as map } from 'immutable';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 
-const store = createStore(reducer, map(), composeWithDevTools(applyMiddleware(logger)));
+const store = createStore(reducer, map(), composeWithDevTools(applyMiddleware(logger, thunk)));
 
 const homeContainer = document.getElementById('home-container');
 

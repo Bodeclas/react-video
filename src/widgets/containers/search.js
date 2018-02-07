@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Search from '../components/search';
 import { connect } from 'react-redux';
-import * as actions from '../../actions/index'
-import { bindActionCreators } from 'redux'
+import * as actions from '../../actions/index';
+import { bindActionCreators } from 'redux';
 
 class SearchContainer extends Component {
   state = {
@@ -10,7 +10,7 @@ class SearchContainer extends Component {
   };
   handleSubmit = event => {
     event.preventDefault();
-    this.props.actions.searchEntities(this.input.value);
+    this.props.actions.searchAsyncEntities(this.input.value);
   };
   setInputRef = element => {
     this.input = element;
@@ -34,8 +34,8 @@ class SearchContainer extends Component {
 
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators(actions, dispatch)
-  }
+    actions: bindActionCreators(actions, dispatch),
+  };
 }
 
 export default connect(null, mapDispatchToProps)(SearchContainer);
