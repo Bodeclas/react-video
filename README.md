@@ -1,6 +1,6 @@
 # React-Video
 
-A basic application built with React 16
+A application built with React 16 and Redux
 
 ## Dev Server
 
